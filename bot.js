@@ -43,9 +43,7 @@ client.on('message', dmgrant => {
     if (dmgrant.content.startsWith('/dm ') && dmgrant.mentions.users.size) {
         var v=dmgrant.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
         var member=dmgrant.mentions.users[0] // The mentioned user
-        for (let i = 0; i < 100	; i++) { 
 	member.send(v) // send that user a DM
-	}
     }
 
 
