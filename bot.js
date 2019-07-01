@@ -48,4 +48,4 @@ client.on('message', coinflip =>{
 	
 });
 //turn bot online
-client.login(process.env.Bot_TOKEN);
+client.login(process.env.BOT_TOKEN);
