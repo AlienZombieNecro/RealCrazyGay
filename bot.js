@@ -31,8 +31,8 @@ client.on('message', coinflip =>{
 
 //Grant is a...
 client.on('message', grant => {
-    if (grant.content === 'Grant is') {
-    	let results = ["a **Pig**!", "a **Cow**!","a **Monkey**!","a **Bot**!", "a **Clown**!","an **Alpha**!"];
+    if (grant.content === 'Grant') {
+    	let results = ["is a **Pig**!", "is a **Cow**!","is a **Monkey**!","is a **Bot**!", "is a **Clown**!","is an **Alpha**!"];
 	let resultsIndex = Math.round(Math.random() * outcomes.length);
 	grant.channel.send(results[resultsIndex]);
   	}
