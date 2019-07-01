@@ -41,10 +41,11 @@ client.on('message', message1 =>{
 //spam grant
 client.on('message', dmgrant => {
     if (dmgrant.content.startsWith('/dm ') && dmgrant.mentions.users.size) {
-        for (let i = 0; i < 100	; i++) {
+        for (let i = 0; i < 10	; i++) {
 	var v=dmgrant.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
         var member=dmgrant.mentions.users[0] // The mentioned user
 	member.send(v) // send that user a DM
+	}
     }
 
 
