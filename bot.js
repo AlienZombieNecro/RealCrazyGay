@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
 const token = "NTk1MTcwOTIwNTA3NzY4ODMz.XRnMoA.uYY_zm7T1zaItZS1Ztz_hoc-tyI";
 
@@ -7,13 +7,13 @@ const PREFIX = '/';
 //checking if bot is on
 bot.on('ready', () =>{
 	console.log('This bot is online!');
-})
+});
 //nite nite command
 bot.on('message', msg =>{
 	if(msg.content === "NITE NITE"){
 		msg.reply('NITE NITE');
 	}
-})
+});
 //monkey command
 bot.on('message', message1 =>{
 	
@@ -26,7 +26,7 @@ bot.on('message', message1 =>{
 		}
 		break;
 	}
-})
+});
 //coinflip command
 bot.on('message', coinflip =>{
 	let args = coinflip.content.substring(PREFIX.length).split(" ");
@@ -37,7 +37,7 @@ bot.on('message', coinflip =>{
 		let outcomesIndex = Math.round(Math.random() * outcomes.length);
 		coinflip.channel.send(outcomes[outcomesIndex]);
 	}
-})
+});
 //pig command
 bot.on('message', coinflip =>{
 	let args = message1.content.substring(PREFIX.length).split(" ");
@@ -48,6 +48,6 @@ bot.on('message', coinflip =>{
 	case 'who':
 	}
 	
-})
+});
 //turn bot online
-bot.login(process.env.Bot_TOKEN);
+client.login(process.env.Bot_TOKEN);
