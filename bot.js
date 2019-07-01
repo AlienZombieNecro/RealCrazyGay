@@ -34,7 +34,7 @@ client.on('message', coinflip =>{
 	let args = coinflip.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'coinflip':
-		coinflip.delete (3000);
+		coinflip.delete (1000);
 		let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
 		let outcomesIndex = Math.round(Math.random() * outcomes.length);
 		coinflip.channel.send(outcomes[outcomesIndex]);
