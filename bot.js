@@ -39,14 +39,7 @@ client.on('message', coinflip =>{
 	}
 });
 
-//Grant is a...
-client.on('message', grant => {
-    if (grant.content === 'Grant is ') {
-    	let results = ["a **Pig**!", "a **Cow**!","a **Monkey**"!,"a **Bot**!", "a **Clown**!","an **Alpha**"!];
-	let resultsIndex = Math.round(Math.random() * outcomes.length);
-	grant.channel.send(results[resultsIndex]);
-  	}
-});
+
 
 //turn bot online
 client.login(process.env.BOT_TOKEN);
