@@ -30,7 +30,7 @@ client.on('message', coinflip =>{
 
 //monkey command
 client.on('message', message1 =>{
-	if (message1.content === '@monkey') {
+	if (message1.content === "@monkey") {
 		message1.delete (1000);
 		for (let i = 0; i < 4; i++) {
 			message1.channel.send('<@244645880446189568>').then(d_msg => {d_msg.delete(3000); });
