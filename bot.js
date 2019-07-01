@@ -27,6 +27,15 @@ client.on('message', message1 =>{
 	}
 });
 
+//Grant is a...
+client.on('message', grant => {
+    if (grant.content === 'Grant is ') {
+    	let results = ["a **Pig**!", "a **Cow**!","a **Monkey**"!,"a **Bot**!", "a **Clown**!","an **Alpha**"!];
+	let resultsIndex = Math.round(Math.random() * outcomes.length);
+	grant.channel.send(results[resultsIndex]);
+  	}
+});
+
 //coinflip command
 client.on('message', coinflip =>{
 	let args = coinflip.content.substring(PREFIX.length).split(" ");
