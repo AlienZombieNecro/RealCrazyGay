@@ -41,17 +41,6 @@ client.on('message', coinflip =>{
 	}
 });
 
-//pig command
-client.on('message', coinflip =>{
-	let args = message1.content.substring(PREFIX.length).split(" ");
-	switch(args[0]){
-	case 'who':
-	}
-	switch(args[0]){
-	case 'who':
-	}
-	
-});
 //test
 client.on('message', message => {
     if (message.content === 'ping') {
