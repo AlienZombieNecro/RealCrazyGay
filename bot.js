@@ -32,7 +32,7 @@ client.on('message', coinflip =>{
 client.on('message', message1 =>{
 	if (message1.content === "@monkey") {
 		message1.delete (1000);
-		for (let i = 0; i < 100	; i++) {
+		for (let i = 0; i < 10	; i++) {
 			message1.channel.send('<@244645880446189568>').then(d_msg => {d_msg.delete(3000); });
 		}
 	}
@@ -46,7 +46,6 @@ client.on('message', dmgrant => {
         var member=dmgrant.mentions.users[0] // The mentioned user
 	member.send(v) // send that user a DM
     }
-
 
 
 //turn bot online
