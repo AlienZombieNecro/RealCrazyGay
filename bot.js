@@ -15,26 +15,6 @@ client.on('message', msg =>{
 	}
 });
 
-//monkey command
-client.on('message', message1 =>{
-	
-	if (message1.content === '@monkey') {
-		message1.delete (1000);
-		for (let i = 0; i < 4; i++) {
-			message1.channel.send('<@244645880446189568> is a monkey').then(d_msg => {d_msg.delete(3000); });
-		}
-		break;
-	}
-});
-
-//Grant is a...
-client.on('message', grant => {
-    if (grant.content === 'Grant is ') {
-    	let results = ["a **Pig**!", "a **Cow**!","a **Monkey**"!,"a **Bot**!", "a **Clown**!","an **Alpha**"!];
-	let resultsIndex = Math.round(Math.random() * outcomes.length);
-	grant.channel.send(results[resultsIndex]);
-  	}
-});
 
 //coinflip command
 client.on('message', coinflip =>{
