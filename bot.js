@@ -38,12 +38,6 @@ client.on('message', message1 =>{
 	}
 });
 
-//spam grant
-client.on('message', dmgrant => {
-    if (dmgrant.content.startsWith('/dm ') && dmgrant.mentions.users.size) {
-	var v=dmgrant.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
-        var member=dmgrant.mentions.users[0] // The mentioned user
-    }
 
 
 //turn bot online
