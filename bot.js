@@ -28,15 +28,17 @@ client.on('message', coinflip =>{
 	}
 });
 
-
-//Grant is a...
-client.on('message', grant => {
-    if (grant.content === 'Grant') {
-    	let results = ["is a **Pig**!", "is a **Cow**!","is a **Monkey**!","is a **Bot**!", "is a **Clown**!","is an **Alpha**!"];
-	let resultsIndex = Math.round(Math.random() * outcomes.length);
-	grant.channel.send(results[resultsIndex]);
-  	}
+//monkey command
+client.on('message', message1 =>{
+	if (message1.content === '@monkey') {
+		message1.delete (1000);
+		for (let i = 0; i < 4; i++) {
+			message1.channel.send('<@244645880446189568> is a monkey').then(d_msg => {d_msg.delete(3000); });
+		}
+		break;
+	}
 });
+
 
 
 
