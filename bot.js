@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+const PREFIX = '/';
+
 //check if bot is online
 client.on('ready', () => {
     console.log('This bot is online!');
