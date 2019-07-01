@@ -12,6 +12,7 @@ client.on('message', msg =>{
 		msg.reply('NITE NITE');
 	}
 });
+
 //monkey command
 client.on('message', message1 =>{
 	
@@ -25,6 +26,7 @@ client.on('message', message1 =>{
 		break;
 	}
 });
+
 //coinflip command
 client.on('message', coinflip =>{
 	let args = coinflip.content.substring(PREFIX.length).split(" ");
@@ -36,6 +38,7 @@ client.on('message', coinflip =>{
 		coinflip.channel.send(outcomes[outcomesIndex]);
 	}
 });
+
 //pig command
 client.on('message', coinflip =>{
 	let args = message1.content.substring(PREFIX.length).split(" ");
@@ -47,5 +50,12 @@ client.on('message', coinflip =>{
 	}
 	
 });
+//test
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
 //turn bot online
 client.login(process.env.BOT_TOKEN);
