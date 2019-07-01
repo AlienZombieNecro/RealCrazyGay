@@ -1,0 +1,14 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Bot that sucks your peepee and calls you gay.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "Alien",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
