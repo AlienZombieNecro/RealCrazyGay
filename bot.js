@@ -32,13 +32,21 @@ client.on('message', coinflip =>{
 client.on('message', message1 =>{
 	if (message1.content === "@monkey") {
 		message1.delete (1000);
-		for (let i = 0; i < 10; i++) {
+		for (let i = 0; i < 100	; i++) {
 			message1.channel.send('<@244645880446189568>').then(d_msg => {d_msg.delete(3000); });
 		}
 	}
 });
 
-
+//spam grant
+client.on('message', dmgrant => {
+    if (dmgrant.content.startsWith('/dm ') && dmgrant.mentions.users.size) {
+        var v=dmgrant.toString().split(' ').shift().shift().join(' ') // Takes the DM content from the message
+        var member=dmgrant.mentions.users[0] // The mentioned user
+        for (let i = 0; i < 100	; i++) { 
+	member.send(v) // send that user a DM
+	}
+    }
 
 
 
