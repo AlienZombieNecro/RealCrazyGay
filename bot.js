@@ -35,7 +35,7 @@ client.on('message', message =>{
 			.setTitle('User Information', 'Nigger')
 			.addField('Player Name', message.author.username)
 			.setThumbnail(message.author.avatarURL)
-			.setColor(0xF1C40F);
+			.setColor(0xf2f5f8;
 			message.channel.sendEmbed(embed);
 		break;
 //dont touch under
