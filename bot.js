@@ -30,8 +30,7 @@ client.on('message', msg1 =>{
 			msg1.channel.send("The coin landed on **TAILS**!")
 		}
 
-})
-	}
+	})
 });
 
 //monkey command
