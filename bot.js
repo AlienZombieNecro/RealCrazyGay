@@ -29,7 +29,7 @@ client.on('message', message =>{
 			else {
 				message.channel.send("The coin landed on **TAILS**!");
 			}
-		case 'profile'
+		case 'embed'
 			const embed = new Discord.RichEmbed()
 			.addField('Player Name', message.author.username);
 			message.channel.sendEmbed(embed);
