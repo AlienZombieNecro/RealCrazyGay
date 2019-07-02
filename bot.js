@@ -21,14 +21,7 @@ client.on('message', msg1 =>{
 	let args = msg1.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'coinflip':
-		var sides = ["heads", "tails"];
-		var side = -1;
-		if (messageArray[2].toLowerCase() == "heads"){
-		    side = 0;
-		}
-		else {
-		    side = 1;
-		}
+		var sides = [0,1];
 		var number = Math.floor(Math.random() * 2);
 		if (side == number) {
 			msg1.channel.send("The coin landed on **HEADS**!")
