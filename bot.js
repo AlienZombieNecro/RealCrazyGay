@@ -25,8 +25,6 @@ client.on('message', msg1 =>{
 			let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
 			let outcomesIndex = Math.round(Math.random() * outcomes.length);
 			msg1.channel.send(outcomes[outcomesIndex]);
-		case 'x':
-			msg1.delete (1000);
 	}
 });
 
