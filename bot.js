@@ -35,10 +35,10 @@ client.on('message', flip2 =>{
 		flip2.delete (1000);
 		var x =Math.floor(Math.random()*2);
 		if ( x==0){
-		flip2.channel.send("Heads");
+		flip2.channel.send("Heads")
 		}
 		else{
-		flip2.channel.send("Tails");
+		flip2.channel.send("Tails")
 		}}
 
 
