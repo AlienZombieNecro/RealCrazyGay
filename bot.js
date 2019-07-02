@@ -33,7 +33,7 @@ client.on('message', flip2 =>{
 	switch(args[0]){
 		case 'coinflip2':
 		flip2.delete (1000);
-		flip2.channel.send(return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';)
+		flip2.channel.send((Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';)
 	}
 });
 
