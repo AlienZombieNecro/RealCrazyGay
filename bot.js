@@ -34,7 +34,8 @@ client.on('message', message =>{
 			const embed = new Discord.RichEmbed()
 			.setTitle('User Information')
 			.addField('Player Name', message.author.username)
-			.setColor
+			.setThumbnail(message.author.avatarURL)
+			.setColor(0xF1C40F);
 			message.channel.sendEmbed(embed);
 		break;
 //dont touch under
