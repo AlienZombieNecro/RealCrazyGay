@@ -38,7 +38,6 @@ client.on('message', message =>{
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0xf2f5f8);
 			message.channel.sendEmbed(embed);
-			message.mentions.first();
 		break;
 //dont touch under
 	}
