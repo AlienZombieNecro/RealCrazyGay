@@ -33,10 +33,10 @@ client.on('message', message =>{
 		case 'profile':
 			message.delete (1000);
 			const embed = new Discord.RichEmbed()
-			.setTitle('User Information')
+			.setTitle('User Information', 'nigger')
 			.addField('Player Name', message.author.username)
 			.setThumbnail(message.author.avatarURL)
-			.setColor(0xf2f5f8;
+			.setColor(0xf2f5f8);
 			message.channel.sendEmbed(embed);
 		break;
 //dont touch under
