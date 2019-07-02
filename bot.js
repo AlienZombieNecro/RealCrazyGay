@@ -21,15 +21,22 @@ client.on('message', msg1 =>{
 	let args = msg1.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'coinflip':
-			msg1.delete (1000);
-			let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
-			let outcomesIndex = Math.floor(Math.random() * outcomes.length);
-			msg1.channel.send(outcomes[outcomesIndex]);
-		case 'profile':
-			const embed = new Discord.RichEmbed
-			.addField('Discord Name', msg1.author.username);
-			msg1.channel.sendEmbed(embed);
-		break;
+		var sides = ["heads", "tails"];
+		var side = -1;
+		if (messageArray[2].toLowerCase() == "heads"){
+		    side = 0;
+		}
+		else {
+		    side = 1;
+		}
+		var number = Math.floor(Math.random() * 2);
+		if (side == number) {
+			msg1.channel.send("The coin landed on **HEADS**!")
+		}
+		else {
+			msg1.channel.send("The coin landed on **TAILS**!")
+		}
+
 })
 	}
 });
