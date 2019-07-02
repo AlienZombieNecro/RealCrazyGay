@@ -32,7 +32,7 @@ client.on('message', message =>{
 		break;
 		case 'profile':
 			const embed = new Discord.RichEmbed()
-			.setTitle('User Information')
+			.setTitle('User Information', 'Nigger')
 			.addField('Player Name', message.author.username)
 			.setThumbnail(message.author.avatarURL)
 			.setColor(0xF1C40F);
