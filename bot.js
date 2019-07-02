@@ -31,6 +31,7 @@ client.on('message', message =>{
 			}
 		break;
 		case 'profile':
+			message.delete (1000);
 			const embed = new Discord.RichEmbed()
 			.setTitle('User Information', 'Nigger')
 			.addField('Player Name', message.author.username)
