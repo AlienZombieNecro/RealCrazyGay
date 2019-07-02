@@ -16,17 +16,17 @@ client.on('message', msg =>{
 });
 
 //coinflip command
-client.on('message', msg1 =>{
-	let args = msg1.content.substring(PREFIX.length).split(" ");
+
+client.on('message', coinflip =>{
+	let args = coinflip.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'coinflip':
-			msg1.delete (1000);
-			let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
-			let outcomesIndex = Math.round(Math.random() * outcomes.length);
-			msg1.channel.send(outcomes[outcomesIndex]);
-	})
+		coinflip.delete (1000);
+		let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
+		let outcomesIndex = Math.round(Math.random() * outcomes.length);
+		coinflip.channel.send(outcomes[outcomesIndex]);
+	}
 });
-
 
 //monkey command
 client.on('message', monkey =>{
