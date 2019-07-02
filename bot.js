@@ -39,15 +39,7 @@ client.on('message', monkey =>{
 });
 
 //embed
-client.on('message', e1=>{
-	let args = e1.content.substring(PREFIX.length).split(" ");
-	switch(args[0]){
-		case 'profile':
-			const embed = new Discord.RichEmbed
-			.addField('Discord Name', e1.author.username);
-			e1.channel.sendEmbed(embed);
-		break;
-})
+
 
 
 
