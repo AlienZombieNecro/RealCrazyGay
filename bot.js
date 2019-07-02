@@ -23,8 +23,14 @@ client.on('message', msg1 =>{
 		case 'coinflip':
 			msg1.delete (1000);
 			let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
-			let outcomesIndex = Math.round(Math.random() * outcomes.length);
+			let outcomesIndex = Math.floor(Math.random() * outcomes.length);
 			msg1.channel.send(outcomes[outcomesIndex]);
+		case 'profile':
+			const embed = new Discord.RichEmbed
+			.addField('Discord Name', msg1.author.username);
+			msg1.channel.sendEmbed(embed);
+		break;
+})
 	}
 });
 
@@ -37,8 +43,6 @@ client.on('message', monkey =>{
 		}
 	}
 });
-
-//embed
 
 
 
