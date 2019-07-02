@@ -17,26 +17,43 @@ client.on('message', msg =>{
 
 
 //coinflip command
-client.on('message', coinflip =>{
-	let args = coinflip.content.substring(PREFIX.length).split(" ");
+client.on('message', msg1 =>{
+	let args = msg1.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
 		case 'coinflip':
-		coinflip.delete (1000);
-		let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
-		let outcomesIndex = Math.round(Math.random() * outcomes.length);
-		coinflip.channel.send(outcomes[outcomesIndex]);
+			msg1.delete (1000);
+			let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
+			let outcomesIndex = Math.round(Math.random() * outcomes.length);
+			msg1.channel.send(outcomes[outcomesIndex]);
+		case 'x':
+			msg1.delete (1000);
 	}
 });
 
 //monkey command
-client.on('message', message1 =>{
-	if (message1.content === "@monkey") {
-		message1.delete (1000);
+client.on('message', monkey =>{
+	if (monkey.content === "@monkey") {
+		monkey.delete (1000);
 		for (let i = 0; i < 10	; i++) {
-			message1.channel.send('<@244645880446189568>').then(d_msg => {d_msg.delete(3000); });
+			monkey.channel.send('<@244645880446189568>').then(d_msg => {d_msg.delete(3000); });
 		}
 	}
 });
+
+//embed
+client.on('message', e1=>{
+	let args = e1.content.substring(PREFIX.length).split(" ");
+	switch(args[0]){
+		case 'profile':
+			const embed = new Discord.RichEmbed
+			.addField('Discord Name', e1.author.username);
+			e1.channel.sendEmbed(embed);
+		break;
+})
+
+
+
+
 
 
 
