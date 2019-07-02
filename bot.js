@@ -16,30 +16,18 @@ client.on('message', msg =>{
 });
 
 //coinflip command
-client.on('message', coinflip =>{
-	let args = coinflip.content.substring(PREFIX.length).split(" ");
-	switch(args[0]){
-		case 'coinflip':
-		coinflip.delete (1000);
-		let outcomes = ["The coin landed on **HEADS**!", "The coin landed on **TAILS**!"];
-		let outcomesIndex = Math.round(Math.random() * outcomes.length);
-		coinflip.channel.send(outcomes[outcomesIndex]);
-	}
-});
-
-//coinflip2 command
 client.on('message', flip2 =>{
 	let args = flip2.content.substring(PREFIX.length).split(" ");
 	switch(args[0]){
-		case 'coinflip2':
+		case 'coinflip':
 		flip2.delete (1000);
 		var x = Math.floor(Math.random() * 2);
 		console.log(x);
 		if (x == 0) {
-			flip2.channel.send("Heads");
+			flip2.channel.send("The coin landed on **HEADS**!");
 		}
 		else {
-			flip2.channel.send("Tails");
+			flip2.channel.send("The coin landed on **TAILS**!");
 		}
 
 
